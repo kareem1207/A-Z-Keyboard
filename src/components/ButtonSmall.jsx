@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 /* eslint-disable react/prop-types */
-export const ButtonCaps = ({displayText})=>{
+export const ButtonSmall = ({displayText})=>{
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [display , setDisplay]=useState("");
     let letter=[]; 
-    for(let i = 65 ; i <= 90 ; i++)
+    for(let i = 97 ; i <= 122 ; i++)
         letter.push(String.fromCharCode(i));
     letter.push(" ");
     console.log(letter);
