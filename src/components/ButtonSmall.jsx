@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
+//* Css
+import styles from "@/CSS/ButtonSmall.module.css";
+
 export const ButtonSmall = ({ displayText , display })=>{
     let letter=[]; 
     for(let i = 97 ; i <= 122 ; i++)
         letter.push(String.fromCharCode(i));
-    letter.push(" ");
+    // letter.push(" ");
     console.log(letter);
 
     const handleDisplay = (text)=>{ 
@@ -15,8 +18,10 @@ export const ButtonSmall = ({ displayText , display })=>{
     return <>
     {
         letter.map((letter)=>(
-            <button key={letter} onClick={()=>handleDisplay(letter)}>{letter}</button>
+            <button className={styles["button-small"]} key={letter} onClick={()=>handleDisplay(letter)}>{letter}</button>
         ))
     }
+    <br/>
+    <button className={styles["space-bar"]} key={letter} onClick={()=>handleDisplay(" ")}>{" "}</button>
     </>
 } 

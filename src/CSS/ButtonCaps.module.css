@@ -1,0 +1,56 @@
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button:active {
+    background-color: #004085;
+}
+
+.spacebar {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    background-color: #28a745;
+}
+
+@media (max-width: 600px) {
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .spacebar {
+        font-size: 16px;
+    }
+}
+
+.impressive {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.impressive:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.impressive:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+}

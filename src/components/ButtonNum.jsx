@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+//* Css
+import  styles from "@/CSS/ButtonNum.module.css";
 export const ButtonNum = ({ displayText , display})=>{
     let digits=[]; 
     for(let i = 0 ; i <= 9 ; i++)
@@ -14,7 +16,7 @@ export const ButtonNum = ({ displayText , display})=>{
     return <>
     {
         digits.map((digit)=>(
-            <button key={digit} onClick={()=>handleDisplay(digit)}>{digit}</button>
+            <button className={styles["buttonNum"]} key={digit} onClick={()=>handleDisplay(digit)}>{digit}</button>
         ))
     }
     </>

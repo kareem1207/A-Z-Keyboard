@@ -1,0 +1,35 @@
+.button-small {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-small:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.button-small:active {
+    background-color: #3e8e41;
+    transform: scale(0.95);
+}
+@media (max-width: 600px) {
+    .button-small {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+.space-bar {
+    composes: button-small;
+    width: 200px; 
+    height: 50px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
