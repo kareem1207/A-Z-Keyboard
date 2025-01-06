@@ -1,9 +1,5 @@
-import { useState } from "react";
-
 /* eslint-disable react/prop-types */
-export const ButtonCaps = ({displayText})=>{
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [display , setDisplay]=useState("");
+export const ButtonCaps = ({ displayText , display})=>{
     let letter=[]; 
     for(let i = 65 ; i <= 90 ; i++)
         letter.push(String.fromCharCode(i));
@@ -12,7 +8,6 @@ export const ButtonCaps = ({displayText})=>{
 
     const handleDisplay = (text)=>{ 
         const newDisplay = display + text;
-        setDisplay(newDisplay);
         console.log(display);
         displayText(newDisplay);
     }
