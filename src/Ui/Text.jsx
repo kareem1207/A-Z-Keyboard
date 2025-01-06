@@ -3,11 +3,14 @@ import { ButtonSmall } from "@/components/ButtonSmall.jsx";
 import { ButtonNum } from "@/components/ButtonNum";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastsify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import { MdContentCopy } from "react-icons/md";
+import { BsCapslock } from "react-icons/bs";
+import { BsCapslockFill } from "react-icons/bs";
 
 export const Text = ()=>{
     const [text , setText] = useState("");
+    const [caps , setCaps] = useState(false);
 
     const copyToClickBoard = async () => {
         try {
@@ -34,7 +37,10 @@ export const Text = ()=>{
         <button onClick={copyToClickBoard}><MdContentCopy /></button>
         <ToastContainer />
         <ButtonNum displayText ={setText} display={text} />
-        <ButtonCaps displayText ={setText} display={text} />
-        <ButtonSmall displayText ={setText} display={text} />
+        <button onClick={()=>setCaps(!caps)}>{caps ? <BsCapslockFill /> : <BsCapslock />}</button>
+        {
+            caps ? <ButtonCaps displayText ={setText} display={text} /> : <ButtonSmall displayText ={setText} display={text} />
+        }
+
     </>
 }
